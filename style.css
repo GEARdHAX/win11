@@ -1,0 +1,249 @@
+* {
+ border: 0px solid red;
+ transition: all 0.3s ease-in-out;
+}
+
+body {
+ font-family: "Poppins", sans-serif;
+ margin: 0;
+ box-sizing: border-box;
+ overflow: hidden !important;
+ color: black;
+ height: 100vh !important;
+}
+
+video {
+ width: 100%;
+ height: 100vh;
+ position: fixed;
+ top: 0;
+ object-fit: cover;
+ pointer-events: none;
+}
+
+.UL-navbar {
+ list-style: none;
+ position: fixed;
+ bottom: -23px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ width: 100%;
+ background: rgba(255, 255, 255, 0.5);
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(9px);
+ -webkit-backdrop-filter: blur(9px);
+}
+
+.navbar {
+ overflow: hidden;
+ cursor: pointer;
+ text-align: center;
+ margin: 3px 10px 3px 10px;
+}
+
+.UL-navbar .navbar img {
+ width: 37px;
+ /* border: 1px solid red; */
+}
+
+.navbar.bg img {
+ border-radius: 5px;
+ background: rgba(255, 255, 255, 0.5);
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+}
+
+.rcMenu {
+ display: flex;
+ display: none;
+ justify-content: start;
+ align-items: start;
+ flex-direction: column;
+ width: 220px;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(10.1px);
+ -webkit-backdrop-filter: blur(10.1px);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.UL-rcMenu {
+ list-style: none;
+}
+
+.rcBar {
+ border-radius: 16px;
+ cursor: pointer;
+ display: flex;
+ justify-content: start;
+ align-items: center;
+ flex-direction: row;
+ /* border: 1px solid red; */
+}
+
+.rcBar img {
+ position: fixed;
+ left: 20px;
+}
+
+.rcBar p {
+ margin-left: 16px;
+ font-size: 15px;
+ /* font-weight: bold !important; */
+}
+
+.rcBar i {
+ position: fixed;
+ right: 30px;
+}
+
+img[src=""] {
+ display: none;
+}
+
+.box {
+ overflow: hidden;
+ position: absolute;
+ bottom: 50px;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 0px;
+ height: 0;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 8px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(10.1px);
+ -webkit-backdrop-filter: blur(10.1px);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ transition: height 0.3s ease-in-out;
+}
+
+.box.slide-in {
+ height: 500px;
+}
+
+.box.slide-out {
+ height: 0;
+}
+
+.box input {
+ font-family: "Poppins", sans-serif;
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ width: 410px;
+ height: 10px;
+ padding: 10px 10px 10px 40px;
+ outline: none;
+ border-radius: 4px;
+}
+
+.box input:focus {
+ border-bottom: 2px solid #068fff;
+}
+
+.box img {
+ position: absolute;
+ z-index: 1;
+ top: 25px;
+ left: 30px;
+ width: 20px;
+}
+.box p {
+ position: absolute;
+ top: 55px;
+ left: 40px;
+}
+.box button {
+ position: absolute;
+ top: 72px;
+ right: 40px;
+ border-radius: 4px;
+}
+.box i {
+ margin: 3px;
+}
+.box ul {
+ text-align: center;
+ list-style: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ top: 70px;
+}
+.box li img {
+ width: 40px;
+}
+.box .Recommended {
+ list-style: none;
+ position: absolute;
+ top: 210px;
+}
+.user img {
+ position: absolute;
+ top: 210px;
+ border: 1px solid black;
+ border-radius: 100%;
+ object-fit: cover;
+ width: 48px;
+ height: 48px;
+ overflow: hidden;
+ width: 48px;
+ /* height: 20px; */
+}
+.notification {
+ position: absolute;
+ bottom: 0px;
+ right: 0px;
+}
+.notification i {
+ padding: 5px;
+ border-radius: 5px;
+}
+.notification i:hover {
+ background-color: white;
+}
+.notification p {
+ pointer-events: none;
+ position: absolute;
+ right: 10px;
+ bottom: 0px;
+}
+#time {
+ pointer-events: none;
+ position: absolute;
+ bottom: -20px;
+ right: 12px;
+ width: max-content;
+}
+
+@media (max-width: 1024px) {
+ .notification i {
+  font-size: 12px;
+ }
+ .notification p {
+  font-size: 12px;
+  right: 10px;
+  bottom: 5px;
+ }
+ #time {
+  bottom: -10px;
+ }
+ .notification i:nth-child(1) {
+  right: 170px !important;
+ }
+ .notification i:nth-child(2) {
+  right: 140px !important;
+ }
+ .notification i:nth-child(3) {
+  right: 110px !important;
+ }
+ .notification i:nth-child(4) {
+  right: 80px !important;
+ }
+}
